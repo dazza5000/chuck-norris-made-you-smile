@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="ly.generalassemb.chucknorris.MainActivity">
+
+    <TextView
+        android:id="@+id/quote_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:minLines="5"/>
+
+
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Chuck"
+        android:visibility="invisible"/>
+
+
+    <ly.generalassemb.chucknorris.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@id/next_button">
+
+        <ly.generalassemb.chucknorris.camera.GraphicOverlay
+            android:id="@+id/faceOverlay"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+    </ly.generalassemb.chucknorris.camera.CameraSourcePreview>>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        android:src="@drawable/chuck_norris"
+        android:layout_above="@id/preview"/>
+
+</RelativeLayout>
